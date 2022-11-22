@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Work+Sans:ital,wght@0,200;0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>COMPLETER VOTRE PROFIL</h1>
+    </header>
+    
+    <main>
+        <section id="section1">
+            <h2>INFORMATION DE CONNEXION</h2>
+            <form action="" method="post">
+                <fieldset>
+                    <label for="user_name">Nom d'utilisateur</label>
+                    <br>
+                    <input class="case" type="text" id="user_name" name="user_name"/>
+                </fieldset>
+                <br>
+
+                <fieldset>  
+                    <label for="mail">Email</label>
+                    <br>
+                    <input class="case" type="email" id="mail" name="mail" class="error"/>
+                    </fieldset>
+                <br>
+                
+                <fieldset>
+                    <label for="password">Mot de passe</label>
+                    <br>
+                    <input class="case" type="password" id="password" name="password"/>
+                </fieldset>
+                <br>
+            
+                <fieldset>
+                    <label for="confirmation_password">Confirmer le mot de passe</label>
+                    <br>
+                    <input class="case" type="password" id="confirmation_password" name="password"/>
+                </fieldset>
+                <br>
+                <br>
+
+                <input class="bouton" type="submit" value="ENREGISTRER"/>
+                
+            </form>
+            <button id="bouton1">ENREGISTRER</button>
+            
+        </section>
+        
+        <section id="section2" class="passive">
+            <h2>PROFIL PROFESSIONNEL</h2>
+            
+            <form action="" method="get">
+                <div class="checkbox">
+                    <legend>Niveau d'études</legend>
+                    <fieldset>
+                        <input type="radio" id="cap" name="niveau" value="cap"/>
+                        <label for="cap">CAP - BEP</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="bac+3" name="niveau" value="bac+3"/>
+                        <label for="bac+3">Bac +3</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="bac" name="niveau" value="bac"/>
+                        <label for="bac">Bac</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="bac+5" name="niveau" value="bac+5"/>
+                        <label for="bac+5">Bac +5</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="bac+2" name="niveau" value="bac+2"/>
+                        <label for="bac+2">Bac +2</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="bac+7" name="niveau" value="bac+7"/>
+                        <label for="bac+7">Bac +7</label>
+                        <br>
+                        <br>
+                    </fieldset>
+                </div>
+
+                <div class="checkbox">
+                    <legend>Profil de développeur</legend>
+                    
+                    <fieldset>
+                        <input type="radio" id="back" name="dev" value="back"/>
+                        <label for="back">Dev Web Backend</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="game" name="dev" value="game"/>
+                        <label for="game">Dev Jeux Vidéo</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="front" name="dev" value="front"/>
+                        <label for="front">Dev Web Frontend</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="logiciel" name="dev" value="logiciel"/>
+                        <label for="logiciel">Dev Logiciel</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="full" name="dev" value="full"/>
+                        <label for="full">Dev Web Fullstrack</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" id="mobil" name="dev" value="mobil"/>
+                        <label for="mobil">Dev Mobil</label>
+                        <br>
+                    </fieldset>
+                    <br>
+                </div>
+                
+                
+                <input class="bouton" type="submit" value="ENREGISTRER"/>
+                
+            </form>
+            <button id="bouton2">ENREGISTRER</button>
+        </section>
+
+        <section id="section3" class="passive">
+            <h2>CENTRES D'INTÉRÊT</h2>
+            
+            <form action="" method="post">
+                
+                <div id="choix_multiples">
+                    <fieldset>
+                        <input type="checkbox" id="banque" name="banque"/>
+                        <label for="banque">Banque</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="communication" name="communication"/>
+                        <label for="communication">Communication</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="publicité" name="publicité"/>
+                        <label for="publicité">Publicité</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="défense" name="défense"/>
+                        <label for="défense">Défense</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="finance" name="finance"/>
+                        <label for="finance">Finance</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="éducation" name="éducation"/>
+                        <label for="éducation">Education</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="santé" name="santé"/>
+                        <label for="santé">Santé</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" id="politique" name="politique"/>
+                        <label for="politique">Politique</label>
+                        <br>
+                        <br>
+                    </fieldset>
+                </div>
+                
+                <input class="bouton" type="submit" value="ENREGISTRER"/>
+                
+                
+            </form>
+            <button id="bouton3">ENREGISTRER</button>
+
+        </section>
+    </main>
+    
+    <footer>
+        
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
