@@ -55,7 +55,6 @@ form1.addEventListener("submit", function(event) {
     let input4 = document.querySelector("#confirmation_password");
     // Si la valeur de l'input est différente de vide
     if (input1.value ===""){
-        console.log("On est dans le if")
         // On cré la balise p
         let inputError = document.createElement("p");
         // On déclare le champs filedset 1
@@ -70,13 +69,26 @@ form1.addEventListener("submit", function(event) {
         fieldset.appendChild(inputError);
     }
     else if (input2.value ===""){
-        console.log("On est dans le Else if")
+        // On cré la balise p
+        let inputError = document.createElement("p");
+        // On déclare le champs filedset 2
+        let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
+        // On rajoute le message d'erreur dans la balise p
+        inputError.innerHTML = "Veuillez entrer un Email";
+        // On ajoute la classe erreur à la balise p
+        inputError.classList.add("erreur");
+        // On ajoute la classe erreur à la balise input
+        input2.classList.add(("erreur2"))
+        // On rajoute le paragraphe p à la fin du premier champ fieldset
+        fieldset.appendChild(inputError);
+    }
+    else if (input2.value.indexOf("@")===-1 || input2.value.indexOf(".")===-1){
         // On cré la balise p
         let inputError2 = document.createElement("p");
         // On déclare le champs filedset 2
         let fieldset2 = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
         // On rajoute le message d'erreur dans la balise p
-        inputError2.innerHTML = "Veuillez entrer un Email";
+        inputError2.innerHTML = "Veuillez entrer un Email avec un @ et un .";
         // On ajoute la classe erreur à la balise p
         inputError2.classList.add("erreur");
         // On ajoute la classe erreur à la balise input
@@ -84,38 +96,49 @@ form1.addEventListener("submit", function(event) {
         // On rajoute le paragraphe p à la fin du premier champ fieldset
         fieldset2.appendChild(inputError2);
     }
-    else if (input2.value ===""){
-        console.log("On est dans le Else if")
+    else if (input3.value ===""){
         // On cré la balise p
-        let inputError2 = document.createElement("p");
+        let inputError = document.createElement("p");
         // On déclare le champs filedset 2
-        let fieldset2 = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
+        let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(3)");
         // On rajoute le message d'erreur dans la balise p
-        inputError2.innerHTML = "Veuillez entrer un Email";
+        inputError.innerHTML = "Veuillez entrer un mot de passe";
         // On ajoute la classe erreur à la balise p
-        inputError2.classList.add("erreur");
+        inputError.classList.add("erreur");
         // On ajoute la classe erreur à la balise input
-        input2.classList.add(("erreur2"))
+        input3.classList.add(("erreur2"))
         // On rajoute le paragraphe p à la fin du premier champ fieldset
-        fieldset2.appendChild(inputError2);
+        fieldset.appendChild(inputError);
     }
-    else if (input2.value.indexOf("@"){
-        console.log("On est dans le second Else if")
+    else if (input4.value ===""){
         // On cré la balise p
-        let inputError2 = document.createElement("p");
+        let inputError = document.createElement("p");
         // On déclare le champs filedset 2
-        let fieldset2 = document.querySelector("form:first-of-type fieldset:nth-of-type(2)");
+        let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(4)");
         // On rajoute le message d'erreur dans la balise p
-        inputError2.innerHTML = "Veuillez entrer un Email";
+        inputError.innerHTML = "Veuillez confirmer votre mot de passe";
         // On ajoute la classe erreur à la balise p
-        inputError2.classList.add("erreur");
+        inputError.classList.add("erreur");
         // On ajoute la classe erreur à la balise input
-        input2.classList.add(("erreur2"))
+        input4.classList.add(("erreur2"))
         // On rajoute le paragraphe p à la fin du premier champ fieldset
-        fieldset2.appendChild(inputError2);
-    else{
-        // On relance la soumission
-        event.target.submit();
+        fieldset.appendChild(inputError);
+    }
+    else if (input3.value !== input4.value){
+        // On cré la balise p
+        let inputError = document.createElement("p");
+        // On déclare le champs filedset 2
+        let fieldset = document.querySelector("form:first-of-type fieldset:nth-of-type(4)");
+        // On rajoute le message d'erreur dans la balise p
+        inputError.innerHTML = "Votre second mot de passe n'est pas identique au premier";
+        // On ajoute la classe erreur à la balise p
+        inputError.classList.add("erreur");
+        // On ajoute la classe erreur à la balise input
+        input4.classList.add(("erreur2"))
+        // On rajoute le paragraphe p à la fin du premier champ fieldset
+        fieldset.appendChild(inputError);
+    }
+
     else{
         // On relance la soumission
         event.target.submit();
