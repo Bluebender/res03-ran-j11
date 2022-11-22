@@ -92,3 +92,6 @@ button{
     font-family: 'Work Sans', sans-serif;
     font-size: 0.6em;
 }
+.erreur2{
+    border: 1px solid red;
+}

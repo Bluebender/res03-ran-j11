@@ -58,8 +58,7 @@ form1.addEventListener("submit", function(event) {
         inputError.innerHTML = "Veuillez choisir un nom d'utilisateur";
         // On ajoute la classe erreur à la balise p
         inputError.classList.add("erreur");
-        document.querySelector()
-        
+        input1.classList.add(("erreur2"))
         // On rajoute le paragraphe p à la fin du premier champ fieldset
         fieldset.appendChild(inputError);
     }
